@@ -1,11 +1,141 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import { Image } from 'astro:assets';
+import profileImage from '../img/profile.jpg';
+import relinkerImage from '../undraw/relinker.svg';
+import enableyImage from '../undraw/enabley.svg';
+import awsImage from '../undraw/aws.svg';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/global.css';
 ---
 
 <Layout>
-	<Welcome />
+	<main class="flex flex-col items-center text-center animate-fade-in h-screen justify-center">
+		<Image
+			src={profileImage}
+			alt="Jauro Fleck"
+			class="w-64 h-64 rounded-full shadow-xl mb-6 object-cover"
+			priority
+		/>
+
+		<h1 class="text-4xl md:text-5xl font-bold tracking-tight">Jauro Fleck</h1>
+		<p class="mt-4 text-lg text-zinc-400 max-w-md">
+			Engenheiro de Software focado em back-end, especialista em construir soluções escaláveis e de alta performance para impulsionar experiências digitais robustas.
+		</p>
+	</main>
+
+	<section class="max-w-3xl mx-auto py-16 px-4 border-t border-zinc-800">
+		<h2 class="text-2xl font-semibold mb-6">Sobre mim</h2>
+		<p class="text-zinc-400 leading-relaxed mb-4">
+			Sou engenheiro de software autodidata com mais de 10 anos de experiência em desenvolvimento web, especializado em soluções robustas, integrações complexas e otimizações de performance em larga escala.
+		</p>
+		<p class="text-zinc-400 leading-relaxed mb-4">
+			Apesar de ser médico formado pela USP, minha verdadeira paixão sempre foi a tecnologia. Cofundador da Atentivo Technologies e atualmente desenvolvedor líder no Grupo ASAS, gerencio projetos críticos de integração entre plataformas e infraestrutura em nuvem. Também atuo na orientação técnica da equipe, promovendo boas práticas de desenvolvimento, revisão de código e tomada de decisões arquiteturais que favorecem escalabilidade e performance.
+		</p>
+		<p class="text-zinc-400 leading-relaxed mb-4">
+			Tenho profundo domínio de <strong>Laravel, PHP, MySQL, PostgreSQL</strong>, além de experiência sólida com <strong>AWS, CI/CD</strong> e arquitetura moderna com <strong>React, Inertia e Tailwind</strong>.
+		</p>
+		<p class="text-zinc-400 leading-relaxed">
+			Além da programação, sou entusiasta de robótica, desenvolvimento de jogos na Unity e ferramentas gráficas com OpenGL. Tenho inglês avançado, excelentes habilidades de comunicação e organização, e facilidade em liderar equipes e projetos com foco técnico.
+		</p>
+	</section>
+
+	<section class="max-w-3xl mx-auto py-16 px-4 border-t border-zinc-800">
+		<h2 class="text-2xl font-semibold mb-6">Stacks e Tecnologias</h2>
+		<div class="flex flex-wrap gap-3">
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">Laravel 12+</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">PHP 8+</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">SQLite</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">MySQL/MariaDB</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">AWS</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">CI/CD</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">React</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">Vue</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">Alpine</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">Livewire</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">Inertia</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">TailwindCSS</span>
+			<span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-sm">Astro</span>
+		</div>
+	</section>
+
+	<section class="max-w-3xl mx-auto py-16 px-4 border-t border-zinc-800">
+		<h2 class="text-2xl font-semibold mb-6">Experiência</h2>
+		<div class="space-y-12">
+			<div class="relative pl-6 border-l border-zinc-700">
+				<div class="absolute left-0 top-1 w-3 h-3 bg-zinc-300 rounded-full"></div>
+				<span class="text-sm text-zinc-500">2023 — atual</span>
+				<h3 class="text-xl font-bold">Grupo ASAS</h3>
+				<p class="text-zinc-400 leading-relaxed">
+					Desenvolvedor líder, atuando no desenvolvimento de sistemas Laravel de alto impacto, integrações por API e Webhooks, infraestrutura AWS, CI/CD, análise de sistemas e melhoria contínua de performance. Além disso, sou responsável por orientar a equipe de desenvolvimento com boas práticas, padrões de projeto e decisões arquiteturais, com forte ênfase em soluções back-end escaláveis, seguras e de alta performance.
+				</p>
+			</div>
+
+			<div class="relative pl-6 border-l border-zinc-700">
+				<div class="absolute left-0 top-1 w-3 h-3 bg-zinc-300 rounded-full"></div>
+				<span class="text-sm text-zinc-500">2018 — 2023</span>
+				<h3 class="text-xl font-bold">Atentivo Technologies</h3>
+				<p class="text-zinc-400 leading-relaxed">
+					Cofundador de uma startup voltada para soluções digitais. Desenvolvi desde sistemas de CRM, controle de estoque, gestão de tickets de suporte até SaaS com tema em chats em tempo real.
+				</p>
+			</div>
+
+			<div class="relative pl-6 border-l border-zinc-700">
+				<div class="absolute left-0 top-1 w-3 h-3 bg-zinc-300 rounded-full"></div>
+				<span class="text-sm text-zinc-500">Freelancer</span>
+				<h3 class="text-xl font-bold">Projetos diversos</h3>
+				<p class="text-zinc-400 leading-relaxed">
+					Experiência com consultoria e desenvolvimento de sistemas sob demanda para pequenas e médias empresas. Projetos com foco em entrega, performance, automações e integrações seguras com plataformas externas.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="max-w-6xl mx-auto py-16 px-4 border-t border-zinc-800">
+		<h2 class="text-2xl font-semibold mb-10 text-center">Projetos em Destaque</h2>
+		<div class="grid md:grid-cols-3 gap-6">
+			<div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden shadow-md">
+				<Image src={relinkerImage} alt="Relinker" class="w-full h-48 object-contain p-2" />
+				<div class="p-4">
+					<h3 class="text-lg font-semibold">Relinker</h3>
+					<p class="text-sm text-zinc-400">Encurtador de URLs com rastreamento estatístico, feito em Laravel, MySQL e Tailwind.</p>
+					<span class="text-xs text-zinc-500">Laravel · MySQL · Tailwind</span>
+				</div>
+			</div>
+
+			<div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden shadow-md">
+				<Image src={enableyImage} alt="Enabley Integrator" class="w-full h-48 object-contain p-2" />
+				<div class="p-4">
+					<h3 class="text-lg font-semibold">Enabley Integrator</h3>
+					<p class="text-sm text-zinc-400">Plataforma de integração webhook para sistemas LMS e ERPs. Backend robusto com autenticação e sincronização em tempo real.</p>
+					<span class="text-xs text-zinc-500">Laravel · Webhooks · API</span>
+				</div>
+			</div>
+
+			<div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden shadow-md">
+				<Image src={awsImage} alt="Infraestrutura AWS" class="w-full h-48 object-contain p-2" />
+				<div class="p-4">
+					<h3 class="text-lg font-semibold">Otimização de Infra AWS</h3>
+					<p class="text-sm text-zinc-400">Redução de custos e reestruturação de ambientes na AWS com EC2, RDS, S3, Redis e CI/CD.</p>
+					<span class="text-xs text-zinc-500">AWS · EC2 · CI/CD</span>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
+
+<style>
+	@keyframes fade-in {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	.animate-fade-in {
+		animation: fade-in 0.8s ease-out;
+	}
+</style>
